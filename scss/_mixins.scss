@@ -1,0 +1,16 @@
+@mixin lora($fs, $lh, $lsp: normal) {
+  font-family: "Lora", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  @if $lsp != normal {
+    letter-spacing: $lsp;
+  }
+}
+@mixin figtree($fs, $lh, $lsp: normal) {
+  font-family: "Figtree", sans-serif;
+  font-size: $fs;
+  line-height: $lh;
+  @if $lsp != normal {
+    letter-spacing: $lsp;
+  }
+}

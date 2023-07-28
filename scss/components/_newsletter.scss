@@ -1,0 +1,87 @@
+.newsletter {
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 104px;
+    background-color: $grayscale200;
+  }
+
+  &__container {
+    max-width: 464px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: $black;
+  }
+
+  &__heading {
+    @include figtree(28px, 36px);
+    font-weight: 600;
+  }
+
+  &__subheading {
+    font-size: 20px;
+    line-height: 32px;
+    span {
+      font-weight: 600;
+      &.blue {
+        color: $seagreen800;
+      }
+      &.underline {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__form {
+    label {
+      @include figtree(14px, 24px);
+      color: $grayscale700;
+    }
+  }
+
+  &__email {
+    @include figtree(14px, 24px);
+    padding: 12px 20px;
+    width: 100%;
+    font-weight: 400;
+    color: $grayscale700;
+    border-radius: unset;
+    border: 1px solid $grayscale300;
+  }
+}
+
+@media (max-width: 1200px) {
+  .newsletter {
+    padding: 0 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter {
+    .container {
+      padding: 32px;
+    }
+
+    &__container {
+      max-width: 326px;
+    }
+
+    &__heading {
+      @include figtree(18px, 28px);
+    }
+
+    &__subheading {
+      @include figtree(16px, 28px);
+    }
+
+    &__form {
+      flex-direction: column;
+      gap: 24px;
+      .btn {
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+  }
+}
