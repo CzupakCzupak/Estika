@@ -5,22 +5,19 @@ button {
 
 .btn {
   display: flex;
-  align-items: stretch;
-}
-
-.btn__text {
-  padding: 12px 20px;
+  font-family: inherit;
+  padding: 12px 0px 12px 20px;
   font-size: 14px;
   line-height: 24px;
   text-transform: uppercase;
   font-weight: 500;
+  position: relative;
 }
 
 .btn__icon {
   display: grid;
-  padding: 0 12px;
+  margin: 0 12px 0 32px;
   place-content: center;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-greensea600 {
@@ -29,15 +26,48 @@ button {
   &:hover {
     background: $seagreen500;
   }
+  &::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 48px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 }
 
 .btn-white {
   background-color: $white;
   color: $black;
-  stroke: $black;
+
+  svg {
+    stroke: $black;
+  }
   &:hover {
     background-color: $seagreen600;
     color: $white;
-    stroke: $white;
+    svg {
+      stroke: $white;
+    }
+  }
+  &::before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 48px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+}
+
+.btn-big {
+  padding: 16px 0px 16px 24px;
+  .btn__icon {
+    margin: 0 16px 0 40px;
+  }
+  &::before {
+    right: 56px;
   }
 }

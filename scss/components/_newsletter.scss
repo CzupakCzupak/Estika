@@ -41,7 +41,8 @@
   }
 
   &__email {
-    @include figtree(14px, 24px);
+    box-sizing: border-box;
+    @include figtree(14px, 22px);
     padding: 12px 20px;
     width: 100%;
     font-weight: 400;

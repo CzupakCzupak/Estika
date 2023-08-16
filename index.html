@@ -12,13 +12,441 @@
     <link rel="stylesheet" href="css/splide.min.css" />
   </head>
   <body>
+    <div class="preheader">
+      <p>
+        Tylko teraz <span>-50%</span> na wybrane plakaty!
+        <span>
+          <a href="#">Sprawdź ofertę</a>
+        </span>
+      </p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="close-preheader">
+        <path d="M16 8L8 16M8.00001 8L16 16" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="header__menu">
+          <div class="d-f ai-c gap-20">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="hamburger-css hamburger-js">
+              <path d="M4 17H20M4 12H20M4 7H20" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <a href="#">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/logo.png" />
+                <img src="img/logo-mobile.png" alt="Logo image" />
+              </picture>
+            </a>
+          </div>
+          <div class="d-f ai-c gap-32">
+            <ul class="header__links">
+              <li><a href="#">O nas</a></li>
+              <li><a href="#">Poradnik</a></li>
+              <li><a href="#">Pomoc</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+            <ul class="header__icons">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M20 20L15.8033 15.8033M18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18C14.6421 18 18 14.6421 18 10.5Z" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M16 15H8C5.79086 15 4 16.7909 4 19V21H20V19C20 16.7909 18.2091 15 16 15Z" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                  <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M2 3H4.5L6.5 17H17M17 17C15.8954 17 15 17.8954 15 19C15 20.1046 15.8954 21 17 21C18.1046 21 19 20.1046 19 19C19 17.8954 18.1046 17 17 17ZM6.07142 14H18L21 5H4.78571M11 19C11 20.1046 10.1046 21 9 21C7.89543 21 7 20.1046 7 19C7 17.8954 7.89543 17 9 17C10.1046 17 11 17.8954 11 19Z" stroke="black" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="header__nav"></div>
+      </div>
+    </header>
+    <div class="header__search">
+      <a href="#" class="header__search-logo">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/logo.png" />
+          <img src="img/logo-mobile.png" alt="Logo image" />
+        </picture>
+      </a>
+      <input type="text" name="" id="" class="header__search-input" />
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M16 8L8 16M8.00001 8L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </div>
+    <section class="hero">
+      <div class="container">
+        <div class="splide splide-hero hero__splide" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="img/bg-image.png" alt="Hero image" />
+                <div class="hero__text">
+                  <h1 class="hero__heading">Znajdź idealny prezent na&nbsp;Dzień&nbsp;Kobiet</h1>
+                  <button class="btn btn-big btn-greensea600">
+                    Odkryj prezenty
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btn__icon">
+                      <path d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <img src="img/bg-image.png" alt="Hero image" />
+                <div class="hero__text">
+                  <h1 class="hero__heading">Znajdź idealny prezent na&nbsp;Dzień&nbsp;Kobiet</h1>
+                  <button class="btn btn-big btn-greensea600">
+                    Odkryj prezenty
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btn__icon">
+                      <path d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <img src="img/bg-image.png" alt="Hero image" />
+                <div class="hero__text">
+                  <h1 class="hero__heading">Znajdź idealny prezent na&nbsp;Dzień&nbsp;Kobiet</h1>
+                  <button class="btn btn-big btn-greensea600">
+                    Odkryj prezenty
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btn__icon">
+                      <path d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="uvp">
+      <div class="container">
+        <div class="uvp__container">
+          <div class="uvp__box">
+            <div class="uvp__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 6.66667V10L11.6667 11.6667M17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10Z" stroke="#005E63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="uvp__text">Dostawa w 48h</p>
+          </div>
+          <div class="uvp__box">
+            <div class="uvp__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M2.92515 12.4922C3.46551 14.0258 4.48971 15.3423 5.8434 16.2433C7.1971 17.1443 8.80697 17.581 10.4304 17.4876C12.0539 17.3941 13.6031 16.7757 14.8444 15.7253C16.0858 14.675 16.9522 13.2497 17.313 11.6641C17.6738 10.0786 17.5096 8.41881 16.845 6.93476C16.1804 5.45072 15.0514 4.22285 13.6283 3.43615C12.2051 2.64946 10.5648 2.34657 8.95447 2.57312C6.23577 2.9556 4.43955 4.92615 2.5 6.66663M2.5 6.66663V1.66663M2.5 6.66663H7.5" stroke="#005E63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="uvp__text">60 dni na darmowy zwrot</p>
+          </div>
+          <div class="uvp__box">
+            <div class="uvp__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M12.5007 9.16667C12.5007 10.5474 11.3814 11.6667 10.0007 11.6667C8.61994 11.6667 7.50065 10.5474 7.50065 9.16667M16.6673 5.83333L15.0007 2.5H5.00065L3.33398 5.83333M16.6673 5.83333H3.33398M16.6673 5.83333V15C16.6673 15.9205 15.9211 16.6667 15.0007 16.6667H5.00065C4.08018 16.6667 3.33398 15.9205 3.33398 15V5.83333" stroke="#005E63" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="uvp__text">Bezpłatna dostawa</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="collection">
       <div class="container">
         <div class="collection__grid">
-          <div class="collection__grid-1--3"></div>
-          <div class="collection__grid-2--3"></div>
-          <div class="collection__grid-2--3"></div>
-          <div class="collection__grid-1--3"></div>
+          <div class="collection__grid-1--3">
+            <picture>
+              <img src="img/collections/obrazy-idealne-na-jesien1-mobile.png" alt="Obrazy idealne na jesień" />
+              <source media="(min-width: 600)" srcset="img/collections/obrazy-idealne-na-jesien1.png" />
+            </picture>
+            <div class="collection__box">
+              <h2 class="collection__heading">Obrazy idealne na&nbsp;jesień</h2>
+              <button class="btn btn-white">
+                Odkryj&nbsp;kolekcję
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn__icon">
+                  <path d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="collection__grid-2--3">
+            <picture>
+              <img src="img/collections/krotki-naglowek-promocji1-mobile.png" alt="Obrazy idealne na jesień" />
+              <source media="(min-width: 600)" srcset="img/collections/krotki-naglowek-promocji1.png" />
+            </picture>
+            <div class="collection__box">
+              <h2 class="collection__heading">Krótki nagłówek promocji</h2>
+              <button class="btn btn-white">
+                Sprawdź
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn__icon">
+                  <path d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="collection__grid-2--3">
+            <picture>
+              <source media="(min-width: 600px)" srcset="img/collections/krotki-naglowek-promocji2.png" />
+              <img src="img/collections/krotki-naglowek-promocji2-mobile.png" alt="Obrazy idealne na jesień" />
+            </picture>
+            <div class="collection__box">
+              <h2 class="collection__heading">Krótki nagłówek promocji</h2>
+              <button class="btn btn-white">
+                Sprawdź
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn__icon">
+                  <path d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="collection__grid-1--3">
+            <picture>
+              <source media="(min-width: 600px)" srcset="img/collections/obrazy-idealne-na-jesien2.png" />
+              <img src="img/collections/obrazy-idealne-na-jesien2-mobile.png" alt="Obrazy idealne na jesień" />
+            </picture>
+            <div class="collection__box">
+              <h2 class="collection__heading">Obrazy idealne na&nbsp;jesień</h2>
+              <button class="btn btn-white">
+                Odkryj&nbsp;kolekcję
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn__icon">
+                  <path d="M17 12L7 12M17 12L13 16M17 12L13 8" stroke="" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="trends">
+      <div class="container">
+        <h3 class="section__heading">Aktualne trendy</h3>
+        <div class="splide splide-trends trends__splide custom__arrows" role="group" aria-label="Trends slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="https://placehold.co/300x420" alt="Placeholder image" class="trends__img" />
+                <p class="trends__desc">Natura</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/300x420" alt="Placeholder image" class="trends__img" />
+                <p class="trends__desc">Muzyka</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/300x420" alt="Placeholder image" class="trends__img" />
+                <p class="trends__desc">Architektura</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/300x420" alt="Placeholder image" class="trends__img" />
+                <p class="trends__desc">Krajobrazy</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/300x420" alt="Placeholder image" class="trends__img" />
+                <p class="trends__desc">Miasta</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="line"></div>
+      </div>
+    </section>
+    <section class="discount">
+      <div class="container">
+        <div class="w-100 d-f ai-c jc-b guide__heading">
+          <h3 class="section__heading">Poradnik</h3>
+          <p class="discount__attr hidden">Zobacz wszystkie</p>
+        </div>
+        <div class="w-100 d-f jc-b ai-c discount__margin">
+          <div class="discount__flexbox">
+            <div class="discount__button discount-btn-js">Rolety</div>
+            <div class="discount__button discount-btn-js">Plisy</div>
+            <div class="discount__button discount-btn-js">Obrazy</div>
+            <div class="discount__button discount-btn-js">Fototapey</div>
+            <div class="discount__button discount-btn-js">Naklejki</div>
+          </div>
+          <p class="discount__attr shown">Zobacz wszystkie</p>
+        </div>
+        <div class="splide splide-discount discount__splide custom__arrows" role="group" aria-label="Slider for discounts">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <div class="w-100 d-f ai-c jc-b mb-12">
+                  <div class="d-f ai-c gap-8">
+                    <div class="discount__tag">Nowość</div>
+                    <div class="discount__tag">-30%</div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                    <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <img src="https://placehold.co/158x224" alt="Placeholder" class="mb-12" />
+                <div class="discount__desc">
+                  <p class="discount__name">Nazwa produktu</p>
+                  <p class="discount__attr">Atrybut</p>
+                  <div class="d-f gap-8 ai-fs">
+                    <p class="discounted__price"><span class="fw-400">od</span> 79,00zł</p>
+                    <p class="discount__price">99,00zł</p>
+                  </div>
+                  <p class="discount__price-lowest">Najniższa cena sprzed 30 dni: 89,00zł</p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="w-100 d-f ai-c jc-b mb-12">
+                  <div class="d-f ai-c gap-8">
+                    <div class="discount__tag">Nowość</div>
+                    <div class="discount__tag">-30%</div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                    <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <img src="https://placehold.co/224x224" alt="Placeholder" class="mb-12" />
+                <div class="discount__desc">
+                  <p class="discount__name">Nazwa produktu</p>
+                  <p class="discount__attr">Atrybut</p>
+                  <div class="d-f gap-8 ai-fs">
+                    <p class="discounted__price"><span class="fw-400">od</span> 79,00zł</p>
+                    <p class="discount__price">99,00zł</p>
+                  </div>
+                  <p class="discount__price-lowest">Najniższa cena sprzed 30 dni: 89,00zł</p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="w-100 d-f ai-c jc-b mb-12">
+                  <div class="d-f ai-c gap-8">
+                    <div class="discount__tag">Nowość</div>
+                    <div class="discount__tag">-30%</div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                    <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <img src="https://placehold.co/158x224" alt="Placeholder" class="mb-12" />
+                <div class="discount__desc">
+                  <p class="discount__name">Nazwa produktu</p>
+                  <p class="discount__attr">Atrybut</p>
+                  <div class="d-f gap-8 ai-fs">
+                    <p class="discounted__price"><span class="fw-400">od</span> 79,00zł</p>
+                    <p class="discount__price">99,00zł</p>
+                  </div>
+                  <p class="discount__price-lowest">Najniższa cena sprzed 30 dni: 89,00zł</p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="w-100 d-f ai-c jc-b mb-12">
+                  <div class="d-f ai-c gap-8">
+                    <div class="discount__tag">Nowość</div>
+                    <div class="discount__tag">-30%</div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                    <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <img src="https://placehold.co/158x224" alt="Placeholder" class="mb-12" />
+                <div class="discount__desc">
+                  <p class="discount__name">Nazwa produktu</p>
+                  <p class="discount__attr">Atrybut</p>
+                  <div class="d-f gap-8 ai-fs">
+                    <p class="discounted__price"><span class="fw-400">od</span> 79,00zł</p>
+                    <p class="discount__price">99,00zł</p>
+                  </div>
+                  <p class="discount__price-lowest">Najniższa cena sprzed 30 dni: 89,00zł</p>
+                </div>
+              </li>
+              <li class="splide__slide">
+                <div class="w-100 d-f ai-c jc-b mb-12">
+                  <div class="d-f ai-c gap-8">
+                    <div class="discount__tag">Nowość</div>
+                    <div class="discount__tag">-30%</div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                    <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+                <img src="https://placehold.co/158x224" alt="Placeholder" class="mb-12" />
+                <div class="discount__desc">
+                  <p class="discount__name">Nazwa produktu</p>
+                  <p class="discount__attr">Atrybut</p>
+                  <div class="d-f gap-8 ai-fs">
+                    <p class="discounted__price"><span class="fw-400">od</span> 79,00zł</p>
+                    <p class="discount__price">99,00zł</p>
+                  </div>
+                  <p class="discount__price-lowest">Najniższa cena sprzed 30 dni: 89,00zł</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="line"></div>
+      </div>
+    </section>
+    <section class="guide">
+      <div class="container">
+        <div class="w-100 d-f ai-c jc-b guide__heading">
+          <h3 class="section__heading">Poradnik</h3>
+          <p class="discount__attr">Zobacz wszystkie</p>
+        </div>
+        <div class="splide splide-guide guide__splide custom__arrows" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="https://placehold.co/342x260" alt="Placeholder image" />
+                <p class="discount__attr mb-4">Kategoria</p>
+                <p class="discount__name mb-8">Jesienne inspiracje dla Twojego domu</p>
+                <p class="discount__price-lowest">20 październik 2022</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/342x260" alt="Placeholder image" />
+                <p class="discount__attr mb-4">Kategoria</p>
+                <p class="discount__name mb-8">Jak prawidłowo dobrać obrazy do stylistyki wnętrza. Na co powinieneś zwracać uwagę?</p>
+                <p class="discount__price-lowest">20 październik 2022</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/342x260" alt="Placeholder image" />
+                <p class="discount__attr mb-4">Kategoria</p>
+                <p class="discount__name mb-8">Rolety i plisy - jaka jest różnica?</p>
+                <p class="discount__price-lowest">20 październik 2022</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/342x260" alt="Placeholder image" />
+                <p class="discount__attr mb-4">Kategoria</p>
+                <p class="discount__name mb-8">Jak wybrać plakat dla wnętrz w stylu boho?</p>
+                <p class="discount__price-lowest">20 październik 2022</p>
+              </li>
+              <li class="splide__slide">
+                <img src="https://placehold.co/342x260" alt="Placeholder image" />
+                <p class="discount__attr mb-4">Kategoria</p>
+                <p class="discount__name mb-8">Jak wybrać plakat dla wnętrz w stylu boho?</p>
+                <p class="discount__price-lowest">20 październik 2022</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="line"></div>
+      </div>
+    </section>
+    <section class="house">
+      <div class="container">
+        <h3 class="section__heading">Estika w waszych domach</h3>
+        <div class="splide splide-house house__splide custom__arrows" role="group" aria-label="Estika w waszych domach">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="img/house1.png" alt="Zdjęcie pokoju" /></li>
+              <li class="splide__slide"><img src="img/house2.png" alt="Zdjęcie pokoju" /></li>
+              <li class="splide__slide"><img src="img/house3.png" alt="Zdjęcie pokoju" /></li>
+              <li class="splide__slide"><img src="img/house4.png" alt="Zdjęcie pokoju" /></li>
+              <li class="splide__slide"><img src="img/house5.png" alt="Zdjęcie pokoju" /></li>
+              <li class="splide__slide"><img src="img/house1.png" alt="Zdjęcie pokoju" /></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -32,16 +460,157 @@
           <form class="newsletter__form rel w-100 d-f ai-fs">
             <input type="email" name="newsletter-email" id="newsletter-email" class="newsletter__email" placeholder="Adres e-mail" />
             <button class="btn btn-greensea600">
-              <p class="btn__text">Dołącz</p>
-              <div class="btn__icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 7V17M7 12H17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </div>
+              Dołącz
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="btn__icon">
+                <path d="M12 7V17M7 12H17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </button>
           </form>
         </div>
       </div>
     </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="w-100 d-f ai-c jc-b footer__heading">
+          <a href="#">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo.png" />
+              <img src="img/logo-mobile.png" alt="Logo image" />
+            </picture>
+          </a>
+        </div>
+        <div class="footer__accordions">
+          <div class="footer__accordion-big footer__accordion-css footer__accordion-js">
+            <div class="d-f ai-c jc-b w-100 footer__title-box">
+              <p class="footer__title">Sklep</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none" class="footer__accordion-icon">
+                <path d="M7.5 10L12.5 15L17.5 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="d-f ai-fs gap-24 footer__accordion-mobile">
+              <ul class="footer__accordion-list">
+                <li><a href="#">Nowości</a></li>
+                <li><a href="#">Promocje</a></li>
+                <li><a href="#">Bestsellery</a></li>
+              </ul>
+              <ul class="footer__accordion-list">
+                <li><a href="#">Rolety</a></li>
+                <li><a href="#">Plisy</a></li>
+                <li><a href="#">Obrazy</a></li>
+                <li><a href="#">Fototapety</a></li>
+                <li><a href="#">Naklejki</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__accordion footer__accordion-css footer__accordion-js">
+            <div class="d-f ai-c jc-b w-100 footer__title-box">
+              <p class="footer__title">Informacje</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none" class="footer__accordion-icon">
+                <path d="M7.5 10L12.5 15L17.5 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <ul class="footer__accordion-list">
+              <li><a href="#">Jak zamawiać</a></li>
+              <li><a href="#">Formy dostawy</a></li>
+              <li><a href="#">Reklamacje i zwroty</a></li>
+              <li><a href="#">Polityka cookies</a></li>
+              <li><a href="#">Regulamin</a></li>
+              <li><a href="#">Polityka&nbsp;prywatności</a></li>
+            </ul>
+          </div>
+          <div class="footer__accordion footer__accordion-css footer__accordion-js">
+            <div class="d-f ai-c jc-b w-100 footer__title-box">
+              <p class="footer__title">Estika</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none" class="footer__accordion-icon">
+                <path d="M7.5 10L12.5 15L17.5 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <ul class="footer__accordion-list">
+              <li><a href="#">O&nbsp;nas</a></li>
+              <li><a href="#">Poradnik</a></li>
+              <li><a href="#">Pomoc</a></li>
+              <li><a href="#">Instrukcje</a></li>
+              <li><a href="#">Współpraca</a></li>
+            </ul>
+          </div>
+          <div class="footer__accordion footer__accordion-css footer__accordion-js">
+            <div class="d-f ai-c jc-b w-100 footer__title-box">
+              <p class="footer__title">Kontakt</p>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none" class="footer__accordion-icon">
+                <path d="M7.5 10L12.5 15L17.5 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <ul class="footer__accordion-list contact">
+              <li class="footer__title"><a href="tel:+48543324432">+48&nbsp;543&nbsp;324&nbsp;432</a></li>
+              <li class="mb-16"><a href="mailto:example@estika.pl">example@estika.pl</a></li>
+              <li class="footer__title mb-8">Godziny pracy</li>
+              <li class="mb-4">pn - pt:&nbsp;&nbsp;&nbsp;8:00 - 16:00</li>
+              <li class="mb-4">sobota:&nbsp;&nbsp;&nbsp;9:00 - 15:00</li>
+            </ul>
+          </div>
+          <div class="footer__accordion last">
+            <p class="footer__title">Znajdź nas</p>
+            <ul class="footer__accordion-last">
+              <li>
+                <a href="Https://facebook.com" target="_blank" class="d-f gap-12 ai-c">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M10.4376 22V14.97H7.89791V12.061H10.4376V9.84396C10.4376 7.32128 11.9311 5.92906 14.2149 5.92906C15.309 5.92906 16.4537 6.12572 16.4537 6.12572V8.60172H15.1922C13.9491 8.60172 13.5624 9.37848 13.5624 10.1736V12.061H16.3355L15.8926 14.97H13.5624V22C18.3431 21.2453 22 17.0829 22 12.061C22 6.50448 17.5228 2 12 2C6.47715 2 2 6.50448 2 12.061C2 17.0829 5.6569 21.2454 10.4376 22Z" fill="#4D4D4D" />
+                  </svg>
+                  <p>Facebook</p>
+                </a>
+              </li>
+              <li>
+                <a href="Https://Instagram.com" target="_blank" class="d-f gap-12 ai-c">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.9999 6.86487C10.9843 6.86487 9.9915 7.16604 9.14703 7.7303C8.30257 8.29456 7.64439 9.09656 7.25572 10.0349C6.86706 10.9732 6.76537 12.0057 6.9635 13.0018C7.16164 13.998 7.65072 14.913 8.36887 15.6311C9.08703 16.3493 10.002 16.8384 10.9981 17.0365C11.9943 17.2346 13.0267 17.133 13.9651 16.7443C14.9034 16.3556 15.7054 15.6974 16.2696 14.853C16.8339 14.0085 17.1351 13.0157 17.1351 12C17.1351 10.6381 16.594 9.33195 15.631 8.36892C14.668 7.40589 13.3619 6.86487 11.9999 6.86487ZM11.9999 15.3333C11.3407 15.3333 10.6962 15.1378 10.1481 14.7716C9.59993 14.4053 9.1727 13.8847 8.92042 13.2756C8.66814 12.6665 8.60213 11.9963 8.73075 11.3497C8.85937 10.7031 9.17684 10.1092 9.64301 9.643C10.1092 9.17683 10.7031 8.85937 11.3497 8.73076C11.9963 8.60214 12.6665 8.66816 13.2756 8.92045C13.8847 9.17274 14.4052 9.59998 14.7715 10.1481C15.1378 10.6963 15.3333 11.3408 15.3333 12C15.3333 12.8841 14.9821 13.7319 14.3569 14.357C13.7318 14.9821 12.884 15.3333 11.9999 15.3333Z"
+                      fill="#4D4D4D"
+                    />
+                    <path d="M18.5379 6.66199C18.5379 7.32472 18.0007 7.86197 17.338 7.86197C16.6752 7.86197 16.138 7.32472 16.138 6.66199C16.138 5.99926 16.6752 5.46201 17.338 5.46201C18.0007 5.46201 18.5379 5.99926 18.5379 6.66199Z" fill="#4D4D4D" />
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M11.9999 2C9.28418 2 8.94351 2.01151 7.87709 2.06018C6.81267 2.10876 6.08578 2.27779 5.44971 2.52501C4.78247 2.7761 4.17802 3.16973 3.67853 3.67843C3.16972 4.17789 2.77599 4.78234 2.5248 5.44962C2.27778 6.08573 2.10876 6.81263 2.06038 7.87705C2.01151 8.9435 2 9.28416 2 12C2 14.7159 2.01151 15.0565 2.06038 16.123C2.10896 17.1874 2.27798 17.9143 2.5252 18.5504C2.7763 19.2176 3.16992 19.8221 3.67861 20.3216C4.1781 20.8303 4.78254 21.2239 5.44979 21.475C6.0859 21.7222 6.81279 21.8912 7.87716 21.9398C8.94376 21.9885 9.2843 22 12.0001 22C14.7159 22 15.0566 21.9885 16.123 21.9398C17.1874 21.8912 17.9143 21.7222 18.5504 21.475C19.2147 21.2181 19.818 20.8252 20.3216 20.3216C20.8252 19.818 21.2181 19.2147 21.475 18.5504C21.7222 17.9143 21.8912 17.1874 21.9398 16.123C21.9885 15.0564 22 14.7158 22 12C22 9.2842 21.9885 8.9435 21.9398 7.87705C21.8912 6.81263 21.7222 6.08573 21.475 5.44966C21.2239 4.78241 20.8303 4.17796 20.3216 3.67847C19.8221 3.16966 19.2176 2.77596 18.5503 2.52481C17.9142 2.27779 17.1873 2.10876 16.1229 2.06038C15.0564 2.01151 14.7158 2 11.9999 2ZM11.9999 3.80184C14.67 3.80184 14.9863 3.81204 16.0409 3.86015C17.0158 3.90465 17.5453 4.06752 17.8977 4.20447C18.332 4.36477 18.7249 4.62039 19.0475 4.95252C19.3796 5.27508 19.6352 5.66798 19.7956 6.10233C19.9325 6.4547 20.0954 6.98419 20.1399 7.95918C20.188 9.01368 20.1982 9.32993 20.1982 12.0001C20.1982 14.6703 20.188 14.9865 20.1399 16.0411C20.0954 17.0161 19.9325 17.5455 19.7956 17.898C19.6292 18.3292 19.3744 18.7209 19.0475 19.0478C18.7207 19.3746 18.329 19.6294 17.8977 19.7958C17.5453 19.9328 17.0158 20.0957 16.0409 20.1401C14.9866 20.1882 14.6703 20.1984 11.9999 20.1984C9.32956 20.1984 9.01343 20.1882 7.95902 20.1401C6.98403 20.0956 6.45458 19.9327 6.10217 19.7958C5.66783 19.6355 5.27494 19.3799 4.95238 19.0478C4.62025 18.7252 4.36464 18.3323 4.20433 17.898C4.06738 17.5456 3.90447 17.0161 3.86002 16.0411C3.81191 14.9866 3.8017 14.6703 3.8017 12.0001C3.8017 9.32993 3.81191 9.01376 3.86002 7.95918C3.90451 6.98419 4.06738 6.45474 4.20433 6.10233C4.36465 5.66796 4.6203 5.27504 4.95246 4.95248C5.27502 4.62035 5.66791 4.36474 6.10225 4.20443C6.45462 4.06748 6.98411 3.90457 7.95909 3.86011C9.01359 3.812 9.32975 3.80184 11.9999 3.80184Z"
+                      fill="#4D4D4D"
+                    />
+                  </svg>
+                  <p>Instagram</p>
+                </a>
+              </li>
+              <li>
+                <a href="Https://youtube.com" target="_blank" class="d-f gap-12 ai-c">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7896 5.41905C20.6511 5.64948 21.3232 6.32412 21.5562 7.18566C22.1656 9.64356 22.1259 14.2905 21.569 16.7868C21.3386 17.6484 20.6639 18.3205 19.8024 18.5534C17.3701 19.1551 6.47597 19.0809 4.18449 18.5534C3.32294 18.323 2.65086 17.6484 2.41787 16.7868C1.84308 14.4441 1.88277 9.48994 2.40507 7.19847C2.6355 6.33692 3.31014 5.66484 4.17169 5.43185C7.42328 4.75337 18.6323 4.97227 19.7896 5.41905ZM10.0618 8.99042L15.2848 11.986L10.0618 14.9816V8.99042Z" fill="#4D4D4D" />
+                  </svg>
+                  <p>Youtube</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__payment">
+          <div class="d-f ai-c gap-12">
+            <div class="footer__pay"></div>
+            <div class="footer__pay"></div>
+            <div class="footer__pay"></div>
+            <div class="footer__pay"></div>
+            <div class="footer__pay"></div>
+          </div>
+          <a href="#">
+            <div class="footer__scroll">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M17 14L12 9L7 14" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </a>
+        </div>
+        <p class="footer__rights">© 2023 estika.pl. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <script src="js/splide.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

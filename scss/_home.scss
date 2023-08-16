@@ -1,7 +1,111 @@
-.collection {
+.hero {
+  &__text {
+    padding: 0 0 120px 88px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.12) 100%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  &__heading {
+    @include lora(48px, 60px, 0.96px);
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 40px;
+    max-width: 586px;
+  }
+
+  &__splide {
+    position: relative;
+    .splide__slide {
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .splide__pagination {
+    bottom: 128px;
+    right: 88px;
+    left: unset;
+    padding: 0;
+    &__page {
+      border: 1px solid $white;
+      padding: 7px;
+      border-radius: 200px;
+      background-color: transparent;
+      opacity: 0.6;
+      margin-right: 8px;
+      &.is-active {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        transform: unset;
+        border: 2px solid $white;
+        background: transparent;
+        opacity: 1;
+        &::before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          border-radius: 200px;
+          position: absolute;
+          background-color: $white;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+        }
+      }
+    }
+  }
+}
+
+.uvp {
   .container {
-    padding-bottom: 64px;
-    border: 1px solid $grayscale100;
+    padding: 32px 0;
+    margin-bottom: 64px;
+    border-bottom: 1px solid $grayscale100;
+  }
+
+  &__container {
+    max-width: 1237px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__icon {
+    display: grid;
+    place-content: center;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    background-color: $seagreen050;
+    border-radius: 200px;
+  }
+
+  &__text {
+    @include figtree(14px, 24px);
+    color: $black;
+  }
+}
+
+.collection {
+  width: auto;
+  .container {
     margin-bottom: 64px;
   }
 
@@ -10,16 +114,570 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     width: 100%;
+    padding-bottom: 64px;
+    border-bottom: 1px solid $grayscale100;
 
-    &-1--3 {
-      height: 200px;
-      background-color: red;
+    &-1--3,
+    &-2--3 {
+      position: relative;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
     }
 
     &-2--3 {
-      height: 200px;
-      background-color: aqua;
       grid-column: span 2;
+
+      .collection__heading {
+        max-width: 424px;
+      }
     }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 48px;
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  &__heading {
+    @include lora(36px, 44px);
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 32px;
+  }
+}
+
+.trends {
+  .container {
+    margin-bottom: 64px;
+  }
+
+  .section__heading {
+    margin-bottom: 48px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    @include figtree(18px, 28px);
+    font-weight: 500;
+    color: $black;
+  }
+
+  &__splide {
+    padding-bottom: 64px;
+  }
+}
+
+.discount {
+  .hidden {
+    display: none;
+  }
+
+  .shown {
+    display: block;
+  }
+
+  .container {
+    margin-bottom: 64px;
+  }
+
+  .guide__heading {
+    margin-bottom: 32px;
+  }
+
+  &__desc {
+    max-width: 224px;
+    width: 100%;
+  }
+
+  &__name {
+    @include figtree(16px, 24px);
+    font-weight: 500;
+  }
+
+  &__attr {
+    @include figtree(14px, 24px);
+    color: $grayscale700;
+  }
+
+  &ed__price {
+    @include figtree(16px, 28px);
+    font-weight: 600;
+    color: $seagreen800;
+  }
+
+  &__price {
+    @include figtree(12px, 24px);
+    text-decoration: line-through;
+    color: $grayscale700;
+  }
+
+  &__price-lowest {
+    @include figtree(12px, 18px);
+    color: $grayscale500;
+  }
+
+  &__flexbox {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    gap: 12px;
+  }
+
+  &__margin {
+    margin-bottom: 40px;
+    padding-right: 16px;
+  }
+
+  &__button {
+    @include figtree(14px, 20px);
+    color: $black;
+    flex-shrink: 0;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 18px;
+    background-color: $grayscale050;
+    transition-property: background, color;
+    transition-duration: 0.3s;
+    &:hover {
+      cursor: pointer;
+      color: $seagreen800;
+    }
+
+    &.active {
+      background-color: $seagreen600;
+      color: $white;
+    }
+  }
+
+  &__splide {
+    padding-bottom: 64px;
+  }
+
+  .splide__slide {
+    width: 272px;
+
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: $bg-light;
+    img {
+      max-width: 224px;
+      max-height: 224px;
+      width: 100%;
+    }
+  }
+
+  &__tag {
+    padding: 2px 8px;
+    border-radius: 16px;
+    border: 1px solid $grayscale100;
+    color: $seagreen800;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include figtree(10px, 20px, 1.2px);
+  }
+}
+
+.guide {
+  .container {
+    margin-bottom: 64px;
+  }
+
+  .guide__heading {
+    margin-bottom: 48px;
+    padding-right: 16px;
+  }
+
+  &__splide {
+    padding-bottom: 64px;
+    .splide__slide {
+      max-width: 342px;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.house {
+  .container {
+    margin-bottom: 60px;
+  }
+
+  .section__heading {
+    margin-bottom: 48px;
+  }
+
+  &__splide {
+    .splide__arrow {
+      top: 50%;
+    }
+  }
+}
+
+.heart {
+  stroke: $black;
+  &:hover {
+    stroke: #eb5757;
+  }
+
+  &.active {
+    stroke: #eb5757;
+    fill: #eb5757;
+  }
+}
+
+.section__heading {
+  @include figtree(28px, 36px);
+  font-weight: 600;
+  color: $black;
+}
+
+.container > .section__heading {
+  padding-right: 16px;
+}
+
+.custom__arrows {
+  .splide__arrow {
+    width: 48px;
+    height: 48px;
+    opacity: 1;
+    background-color: $bg-light;
+    transition: 0.3s opacity;
+    top: 186px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    &:hover {
+      background-color: $seagreen600;
+      svg {
+        fill: $white;
+      }
+    }
+    &--prev {
+      left: -24px;
+    }
+
+    &--next {
+      right: -24px;
+    }
+
+    &:disabled {
+      opacity: 0;
+    }
+  }
+}
+
+.splide__slide {
+  img {
+    width: 100%;
+  }
+}
+
+.line {
+  border-bottom: 1px solid $grayscale100;
+}
+
+@media (max-width: 1500px) {
+  .custom__arrows {
+    .splide__arrow {
+      &--prev {
+        left: 0;
+      }
+
+      &--next {
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 1430px) {
+  .uvp {
+    &__container {
+      padding: 0 16px;
+    }
+  }
+
+  .collection,
+  .house,
+  .newsletter {
+    padding: 0 16px;
+  }
+
+  .discount,
+  .guide,
+  .trends {
+    padding-left: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .collection,
+  .trends,
+  .discount,
+  .guide,
+  .house,
+  .newsletter {
+    padding: 0;
+  }
+
+  .line {
+    margin-right: 16px;
+  }
+
+  .collection {
+    .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  .trends,
+  .guide,
+  .house,
+  .discount {
+    .container {
+      padding-left: 16px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .collection {
+    .container {
+      margin-bottom: 32px;
+    }
+
+    &__grid {
+      padding-bottom: 32px;
+      &-2--3 {
+        .collection__heading {
+          max-width: 250px;
+        }
+      }
+    }
+
+    &__box {
+      padding: 33px 12px;
+    }
+
+    &__heading {
+      @include lora(28px, 36px);
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      font-size: 12px;
+      line-height: 24px;
+      letter-spacing: 0.24px;
+      vertical-align: middle;
+      padding: 8px 0 8px 16px;
+      vertical-align: middle;
+      &__icon {
+        margin: 0 8px 0 24px;
+      }
+
+      &-white {
+        &::before {
+          right: 40px;
+        }
+      }
+    }
+  }
+
+  .trends,
+  .guide,
+  .house,
+  .discount {
+    .splide__arrow {
+      display: none;
+    }
+  }
+
+  .hero {
+    &__text {
+      padding: 0 0 60px 44px;
+    }
+    &__heading {
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    .btn-big {
+      padding: 12px 0px 12px 20px;
+      .btn__icon {
+        margin: 0 12px 0 32px;
+      }
+      &::before {
+        right: 48px;
+      }
+    }
+  }
+
+  .house {
+    .container {
+      margin-bottom: 32px;
+    }
+
+    .section__heading {
+      margin-bottom: 24px;
+    }
+  }
+
+  .discount {
+    .guide__heading {
+      margin-bottom: 16px;
+    }
+    &__margin {
+      margin-bottom: 16px;
+    }
+  }
+
+  .trends,
+  .discount,
+  .guide {
+    &__splide {
+      padding-bottom: 32px;
+    }
+  }
+
+  .guide,
+  .discount,
+  .trends {
+    .container {
+      margin-bottom: 32px;
+    }
+  }
+
+  .trends {
+    .section__heading {
+      margin-bottom: 24px;
+    }
+  }
+
+  .guide {
+    .guide__heading {
+      margin-bottom: 24px;
+    }
+
+    .discount {
+      .splide__slide {
+        &__name {
+          @include figtree(12px, 20px);
+          font-weight: 500;
+        }
+
+        &__attr {
+          @include figtree(12px, 20px);
+          color: $grayscale700;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .collection {
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      &-1--3,
+      &-2--3 {
+        grid-column: unset;
+        aspect-ratio: 1;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+
+    &__box {
+      align-items: center;
+    }
+
+    &__heading {
+      text-align: center;
+    }
+  }
+
+  .hero {
+    margin-bottom: 16px;
+    .splide__slide {
+      max-width: 100%;
+      padding-bottom: 100%;
+      img {
+        position: absolute; /* Position the image within the container */
+        width: 100%; /* Make the image fill the container's width */
+        height: 100%; /* Maintain the aspect ratio */
+        object-fit: cover;
+      }
+    }
+    &__text {
+      padding: 16px 16px 72px;
+      align-items: center;
+    }
+    &__heading {
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: 0.56px;
+      text-align: center;
+    }
+    .splide__pagination {
+      bottom: 24px;
+      right: 0;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0;
+    }
+  }
+
+  .section__heading {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .discount {
+    .hidden {
+      padding-right: 16px;
+      display: block;
+    }
+
+    .shown {
+      display: none;
+    }
+  }
+
+  .trends,
+  .house,
+  .guide {
+    .splide__slide {
+      max-width: 224px;
+    }
+  }
+
+  .uvp {
+    display: none;
   }
 }
