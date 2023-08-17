@@ -425,11 +425,29 @@
     display: flex;
   }
 
+  .order-1 {
+    order: 6;
+  }
+
+  .order-2 {
+    order: 5;
+  }
+
+  .order-4 {
+    order: 3;
+  }
+
+  .order-5 {
+    order: 2;
+  }
+
   .accor-lst {
+    order: 1;
     padding-bottom: 24px;
   }
 
   .accor-fst {
+    order: 4;
     padding-top: 24px;
   }
 

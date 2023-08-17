@@ -122,7 +122,7 @@ const accordionHeaderToggle = (e) => {
       });
     });
     if (child.scrollHeight >= 520) {
-      child.style.maxHeight = 500 + "px";
+      child.style.maxHeight = 450 + "px";
       child.style.overflow = "auto";
     } else {
       child.style.maxHeight = child.scrollHeight + "px";
@@ -151,13 +151,99 @@ window.addEventListener("resize", (e) => {
     const activeAccordionHeader = document.querySelector(".parent-accor.active");
     const accordionListHeader = activeAccordionHeader.querySelector(".header__accordion");
     if (accordionListHeader.scrollHeight >= 520) {
-      accordionListHeader.style.maxHeight = 500 + "px";
+      accordionListHeader.style.maxHeight = 450 + "px";
       accordionListHeader.style.overflow = "auto";
     } else {
       accordionListHeader.style.maxHeight = accordionListHeader.scrollHeight + "px";
     }
   } else {
     accordionHeaderLists.forEach((list) => {
+      list.style.maxHeight = 0;
+    });
+  }
+});
+
+const heartIcons = document.querySelectorAll(".heart");
+const discountBtns = document.querySelectorAll(".discount-btn-js");
+
+discountBtns.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) {
+      e.target.classList.remove("active");
+    } else {
+      e.target.classList.add("active");
+    }
+  });
+});
+
+heartIcons.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const clickedHeart = e.target.closest(".heart");
+
+    if (clickedHeart.classList.contains("active")) {
+      clickedHeart.classList.remove("active");
+    } else {
+      clickedHeart.classList.add("active");
+    }
+  });
+});
+
+const accordions = document.querySelectorAll(".footer__accordion-js");
+
+const accordionToggle = (e) => {
+  const parent = e.target.closest(".footer__accordion-js");
+  const children = parent.querySelectorAll(".footer__accordion-list");
+
+  const child = parent.querySelector(".footer__accordion-list");
+  if (parent.classList.contains("active")) {
+    children.forEach((item) => {
+      item.style.maxHeight = 0 + "px";
+    });
+    parent.classList.remove("active");
+  } else {
+    accordions.forEach((item) => {
+      item.classList.remove("active");
+      const child = item.querySelectorAll(".footer__accordion-list");
+      child.forEach((item) => {
+        item.style.maxHeight = 0;
+      });
+    });
+    parent.classList.add("active");
+    children.forEach((item) => {
+      item.style.maxHeight = item.scrollHeight + "px";
+    });
+  }
+};
+
+accordions.forEach((item) => {
+  item.addEventListener("click", accordionToggle);
+});
+
+const accordionLists = document.querySelectorAll(".footer__accordion-list");
+
+window.addEventListener("resize", (e) => {
+  if (window.innerWidth >= 476) {
+    accordions.forEach((item) => {
+      item.classList.remove("active");
+      const children = item.querySelectorAll(".footer__accordion-list");
+      children.forEach((child) => {
+        child.style.maxHeight = "none";
+      });
+    });
+  } else if (document.querySelector(".footer__accordion-js.active")) {
+    accordionLists.forEach((list) => {
+      list.style.maxHeight = 0;
+    });
+
+    console.log("im turee");
+    const activeAccordion = document.querySelector(".footer__accordion-js.active");
+    const activeChild = activeAccordion.querySelectorAll(".footer__accordion-list");
+
+    activeChild.forEach((actChild) => {
+      actChild.style.maxHeight = actChild.scrollHeight + "px";
+    });
+  } else {
+    accordionLists.forEach((list) => {
       list.style.maxHeight = 0;
     });
   }
