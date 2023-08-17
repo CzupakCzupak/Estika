@@ -66,9 +66,13 @@ const accordions = document.querySelectorAll(".footer__accordion-js");
 
 const accordionToggle = (e) => {
   const parent = e.target.closest(".footer__accordion-js");
+  const children = parent.querySelectorAll(".footer__accordion-list");
+
   const child = parent.querySelector(".footer__accordion-list");
   if (parent.classList.contains("active")) {
-    child.style.maxHeight = 0;
+    children.forEach((item) => {
+      item.style.maxHeight = 0 + "px";
+    });
     parent.classList.remove("active");
   } else {
     accordions.forEach((item) => {
@@ -78,8 +82,10 @@ const accordionToggle = (e) => {
         item.style.maxHeight = 0;
       });
     });
-    child.style.maxHeight = child.scrollHeight + "px";
     parent.classList.add("active");
+    children.forEach((item) => {
+      item.style.maxHeight = item.scrollHeight + "px";
+    });
   }
 };
 
@@ -92,7 +98,6 @@ const accordionLists = document.querySelectorAll(".footer__accordion-list");
 window.addEventListener("resize", (e) => {
   if (window.innerWidth >= 476) {
     accordions.forEach((item) => {
-      console.log("ta");
       item.classList.remove("active");
       const children = item.querySelectorAll(".footer__accordion-list");
       children.forEach((child) => {
@@ -103,8 +108,14 @@ window.addEventListener("resize", (e) => {
     accordionLists.forEach((list) => {
       list.style.maxHeight = 0;
     });
+
+    console.log("im turee");
     const activeAccordion = document.querySelector(".footer__accordion-js.active");
-    activeAccordion.style.maxHeight = activeAccordion.scrollHeight + "px";
+    const activeChild = activeAccordion.querySelectorAll(".footer__accordion-list");
+
+    activeChild.forEach((actChild) => {
+      actChild.style.maxHeight = actChild.scrollHeight + "px";
+    });
   } else {
     accordionLists.forEach((list) => {
       list.style.maxHeight = 0;

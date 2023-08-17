@@ -243,7 +243,7 @@
 
       flex-direction: column;
       li:not(.submenu__title):not(.separator):not(.submenu__links li) {
-        padding: 6px 0;
+        padding: 12px 0;
         color: $grayscale700;
         font-size: 14px;
         font-weight: 400;
@@ -361,7 +361,7 @@
 }
 
 .close-estika-burger {
-  display: flex;
+  display: none;
   width: calc(100% + 48px);
   margin-left: -24px;
   padding: 20px;
@@ -418,28 +418,23 @@
 }
 
 @media (max-width: 1200px) {
-  .checkout-all {
-    display: block;
-  }
-  .close-submenu {
+  .close-submenu,
+  .close-estika-burger,
+  .checkout-all,
+  .hamburger-css {
     display: flex;
   }
 
-  .header__furniture {
-    li {
-      &.active {
-        .submenu {
-          transform: translate(0);
-        }
-      }
-    }
+  .accor-lst {
+    padding-bottom: 24px;
   }
 
-  .header__accordion {
-    max-height: 0;
-    overflow: hidden;
-    transition: 0.3s max-height;
-    gap: 0;
+  .accor-fst {
+    padding-top: 24px;
+  }
+
+  .shadow.active {
+    display: block;
   }
 
   .separator {
@@ -458,6 +453,10 @@
     justify-content: start;
 
     &__pictures {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      gap: unset;
       & > ul,
       ul.doublecolumn,
       ul {
@@ -467,22 +466,23 @@
           flex-direction: column;
         }
       }
+
       .checkout-all {
         padding-top: 24px;
       }
+
       .kolorfot {
         padding-top: 24px;
       }
+
       .kolorlot {
         padding-bottom: 24px;
       }
+
       .submenu__title {
         margin-bottom: unset;
       }
-      gap: unset;
-      width: 100%;
-      height: 100%;
-      position: absolute;
+
       .submenu__links {
         padding-top: 12px;
         border-top: 1px solid $grayscale100;
@@ -522,20 +522,28 @@
     }
   }
 
-  .shadow {
-    &.active {
-      display: block;
-    }
-  }
-
-  .hamburger-css {
-    display: block;
-  }
   .header {
     margin-bottom: unset;
     &__menu {
       .header__links {
         display: none;
+      }
+    }
+
+    &__accordion {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s max-height;
+      gap: 0;
+    }
+
+    &__furniture {
+      li {
+        &.active {
+          .submenu {
+            transform: translate(0);
+          }
+        }
       }
     }
 
@@ -618,6 +626,19 @@
         }
         width: 100%;
       }
+    }
+  }
+
+  .submenu__pictures .submenu__title {
+    svg {
+      transform: rotate(0deg);
+      transition: 0.3s transform;
+    }
+  }
+
+  .submenu__pictures .parent-accor.active {
+    svg {
+      transform: rotate(180deg);
     }
   }
 }
