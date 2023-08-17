@@ -248,3 +248,30 @@ window.addEventListener("resize", (e) => {
     });
   }
 });
+
+// Languages
+
+const langBtn = document.querySelector(".language-js");
+const langOptions = document.querySelector(".language__option");
+const langChosen = document.querySelector(".language__chosen");
+const langTitle = document.querySelector(".language__title");
+
+langBtn.addEventListener("click", (e) => {
+  const list = e.target.closest(".language-js");
+  if (e.target.classList.contains("language__option")) {
+    const text = e.target.dataset.lang;
+    langChosen.textContent = text;
+    langTitle.textContent = text;
+  }
+  if (list.classList.contains("active")) {
+    list.classList.remove("active");
+  } else {
+    list.classList.add("active");
+  }
+});
+
+window.addEventListener("click", (e) => {
+  if (!e.target.closest(".language-js")) {
+    langBtn.classList.remove("active");
+  }
+});

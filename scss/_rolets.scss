@@ -1,0 +1,113 @@
+.rolets {
+  .container {
+    padding: 20px 0 64px;
+  }
+  &__breadcrumbs {
+    color: $grayscale600;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 24px; /* 200% */
+    margin-bottom: 20px;
+  }
+
+  &__categories {
+    width: 188px;
+    &-heading {
+      color: $black;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 28px; /* 175% */
+      margin-bottom: 8px;
+    }
+    &-list {
+    }
+
+    &-item {
+      color: $grayscale700;
+      text-align: center;
+      font-family: Figtree;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 171.429% */
+      padding: 6px 16px;
+    }
+  }
+
+  &__container {
+  }
+
+  &__heading {
+    color: $black;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 36px; /* 128.571% */
+  }
+
+  &__quantity {
+    border-radius: 18px;
+    border: 1px solid $grayscale100;
+    padding: 6px 16px;
+    color: $grayscale700;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px; /* 166.667% */
+  }
+
+  &__select {
+    width: 272px;
+    padding: 12px 16px 12px 20px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px; /* 171.429% */
+    border: 1px solid $grayscale100;
+    background: $white;
+    color: $grayscale700;
+    &:hover {
+      color: $black;
+    }
+    &-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      display: grid;
+      place-content: center;
+      background-color: #00aac0;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+  &__filters {
+    &-items {
+      display: none;
+      padding: 4px 8px 4px 12px;
+      border-radius: 18px;
+      background: $grayscale050;
+      color: $black;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px; /* 142.857% */
+      &.active {
+        margin-top: 16px ;
+        display: flex;
+      }
+    }
+  }
+
+  &__clear {
+    color: $grayscale700;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px; /* 166.667% */
+    text-decoration: underline;
+  }
+}
+
+.breadcrumbs__line {
+  width: 8px;
+  height: 1px;
+  background-color: $grayscale600;
+}
