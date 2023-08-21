@@ -487,41 +487,103 @@
               <h1>Rolety</h1>
               <div class="rolets__quantity rolets-quantity-js">286 prodóktów</div>
             </div>
-            <div class="w-100 d-f jc-b ai-c">
-              <div class="d-f gap-20">
-                <div class="select-btn-js rolets__select d-f jc-b ai-c">
-                  <p>Kolor</p>
-                  <div class="gap-4 d-f ai-c">
-                    <div class="rolets-filter-amount rolets__select-circle active">3</div>
+            <div class="d-f fd-c mb-32 w-100">
+              <div class="w-100 d-f jc-b ai-c">
+                <div class="d-f gap-20">
+                  <div class="select-color-js rolets__select d-f jc-b ai-c" data-open="0">
+                    <p>Kolor</p>
+                    <div class="gap-4 d-f ai-c">
+                      <div class="rolets-filter-amount rolets__select-circle"></div>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 10L12 15L17 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </div>
+                    <div class="rolets__color-select">
+                      <div class="rolets__color-option d-f ai-c" data-color="Antracyt">
+                        <div class="checkbox"></div>
+                        <div class="rolets__color antracyt"></div>
+                        <div class="rolets__color-name">Antracyt</div>
+                        <div class="rolets__color-quantity">20</div>
+                      </div>
+                      <div class="rolets__color-option d-f ai-c" data-color="Biel">
+                        <div class="checkbox"></div>
+                        <div class="rolets__color biel"></div>
+                        <div class="rolets__color-name biel">Biel</div>
+                        <div class="rolets__color-quantity">20</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="select-side-js rolets__select d-f jc-b ai-c">
+                    <p>Mechanizm</p>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                       <path d="M7 10L12 15L17 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
+                    <div class="rolets__side-select">
+                      <div class="rolets__side-option d-f ai-c" data-side="Lewostronna">
+                        <div class="checkbox"></div>
+                        <div class="rolets__side-name">Lewostronna</div>
+                        <div class="rolets__side-quantity">20</div>
+                      </div>
+                      <div class="rolets__color-option d-f ai-c" data-side="Prawostronna">
+                        <div class="checkbox"></div>
+                        <div class="rolets__side-name">Prawostronna</div>
+                        <div class="rolets__side-quantity">20</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="select-btn-js rolets__select d-f jc-b ai-c">
-                  <p>Mechanizm</p>
+                  <p>Sortuj: Popularność</p>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M7 10L12 15L17 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                   </svg>
                 </div>
               </div>
-              <div class="select-btn-js rolets__select d-f jc-b ai-c">
-                <p>Sortuj: Popularność</p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M7 10L12 15L17 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
+              <div class="rolets__filters-menu d-f ai-c gap-24">
+                <div class="rolets__filters d-f gap-12 ai-c"></div>
+                <div class="rolets__clear clear-all-js">Wyczyść wszystkie</div>
               </div>
             </div>
-            <div class="d-f ai-c gap-24">
-              <div class="rolets__filters">
-                <div class="rolets__filters-item d-f ai-c gap-12 active">
-                  <p>Brązowy</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M16 8L8 16M8.00001 8L16 16" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <div class="product__grid d-g grid-3-col">
+              <div class="product active" data-color="Biel">
+                <div class="w-100 d-f ai-c jc-b mb-12">
+                  <div class="d-f ai-c gap-8">
+                    <div class="product__tag">Nowość</div>
+                    <div class="product__tag">-30%</div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                    <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
+                <img src="img/products/biel.png" alt="Placeholder" class="product__img" />
+                <div class="product__desc">
+                  <p class="product__name">Nazwa produktu</p>
+                  <p class="product__attr">Atrybut</p>
+                  <div class="d-f gap-8 ai-fs">
+                    <p class="producted__price"><span class="fw-400">od</span> 79,00zł</p>
+                    <p class="product__price">99,00zł</p>
+                  </div>
+                  <p class="product__price-lowest">Najniższa cena sprzed 30 dni: 89,00zł</p>
+                </div>
               </div>
-              <div class="rolets__clear clear-all-js">Wyczyść wszystkie</div>
+              <div class="product active" data-color="Antracyt">
+                <div class="w-100 d-f ai-c jc-b mb-12">
+                  <div class="d-f ai-c gap-8">
+                    <div class="product__tag">Nowość</div>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="heart">
+                    <path d="M4.3314 12.0474L12 20L19.6686 12.0474C20.5211 11.1633 21 9.96429 21 8.71405C21 6.11055 18.9648 4 16.4543 4C15.2487 4 14.0925 4.49666 13.24 5.38071L12 6.66667L10.76 5.38071C9.90749 4.49666 8.75128 4 7.54569 4C5.03517 4 3 6.11055 3 8.71405C3 9.96429 3.47892 11.1633 4.3314 12.0474Z" stroke="" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+                <img src="img/products/antracyt.png" alt="Placeholder" class="product__img" />
+                <div class="product__desc">
+                  <p class="product__name">Nazwa produktu</p>
+                  <p class="product__attr">Atrybut</p>
+                  <div class="d-f gap-8 ai-fs">
+                    <p class="producted__price black"><span class="fw-400">od</span> 79,00zł</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -699,6 +761,7 @@
       </div>
     </footer>
     <script src="js/splide.min.js"></script>
+    <script src="js/script2.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

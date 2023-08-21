@@ -30,7 +30,7 @@
       font-style: normal;
       font-weight: 400;
       line-height: 24px; /* 171.429% */
-      padding: 6px 16px;
+      padding: 6px 0 6px 16px;
     }
   }
 
@@ -55,6 +55,7 @@
   }
 
   &__select {
+    position: relative;
     width: 272px;
     padding: 12px 16px 12px 20px;
     font-size: 14px;
@@ -71,17 +72,20 @@
       height: 20px;
       border-radius: 10px;
       flex-shrink: 0;
-      display: grid;
+      display: none;
       place-content: center;
       background-color: #00aac0;
       color: #fff;
       font-size: 12px;
       font-weight: 700;
+      &.active {
+        display: grid;
+      }
     }
   }
 
   &__filters {
-    &-items {
+    &-item {
       display: none;
       padding: 4px 8px 4px 12px;
       border-radius: 18px;
@@ -91,7 +95,13 @@
       font-weight: 400;
       line-height: 20px; /* 142.857% */
       &.active {
-        margin-top: 16px ;
+        display: flex;
+      }
+    }
+    &-menu {
+      display: none;
+      margin-top: 16px;
+      &.active {
         display: flex;
       }
     }
@@ -104,10 +114,234 @@
     line-height: 20px; /* 166.667% */
     text-decoration: underline;
   }
+
+  &__color {
+    width: 24px;
+    height: 24px;
+    border-radius: 200px;
+    margin-right: 12px;
+
+    &.antracyt {
+      background-color: #292c33;
+    }
+
+    &.biel {
+      background-color: #eee9e7;
+    }
+    &-select {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      background-color: $white;
+      border: 1px solid $grayscale100;
+      width: 100%;
+      padding: 8px;
+      /* ===== Scrollbar CSS ===== */
+      /* Firefox */
+      * {
+        scrollbar-width: auto;
+        scrollbar-color: #00aac0 #ffffff;
+      }
+
+      /* Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #00aac0;
+        border-radius: 4px;
+        border: 3px solid #ffffff;
+      }
+      max-height: 471px;
+      overflow: auto;
+    }
+    &-name {
+      font-size: 14px;
+      line-height: 24px; /* 171.429% */
+    }
+
+    &-quantity {
+      color: $grayscale700;
+      margin-left: auto;
+      font-size: 12px;
+      line-height: 20px; /* 166.667% */
+    }
+
+    &-option {
+      padding: 10px 12px;
+      .checkbox {
+        width: 20px;
+        height: 20px;
+        padding: 4px;
+        border: 1px solid var(--grayscale-200, #e0e0e0);
+        margin: 2px 12px 2px 2px;
+        position: relative;
+      }
+      &.active {
+        .checkbox {
+          display: grid;
+          place-content: center;
+          border-color: $seagreen600;
+          background-color: $seagreen600;
+          &::before {
+            content: url(../img/check-big.svg);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+
+  &__side {
+    position: relative;
+    &-select {
+      position: absolute;
+      left: 0;
+      top: calc(100% + 10px);
+    }
+  }
+}
+
+.select-color-js {
+  &.active {
+    .rolets__color-select {
+      display: flex;
+    }
+  }
 }
 
 .breadcrumbs__line {
   width: 8px;
   height: 1px;
   background-color: $grayscale600;
+}
+
+.product {
+  width: 100%;
+  align-items: center;
+  padding: 28px 32px 20px;
+  display: none;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+  background-color: $bg-light;
+  &.active {
+    display: flex;
+  }
+  img {
+    max-width: 320px;
+    max-height: 320px;
+    width: 100%;
+  }
+  &__grid {
+    width: 100%;
+    gap: 22px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .shown {
+    display: block;
+  }
+
+  .container {
+    margin-bottom: 64px;
+  }
+
+  .guide__heading {
+    margin-bottom: 32px;
+  }
+
+  &__desc {
+    width: 100%;
+  }
+
+  &__name {
+    @include figtree(16px, 24px);
+    font-weight: 500;
+  }
+
+  &__attr {
+    @include figtree(14px, 24px);
+    color: $grayscale700;
+  }
+
+  &ed__price {
+    @include figtree(16px, 28px);
+    font-weight: 600;
+    color: $seagreen800;
+    &.black {
+      color: $black;
+    }
+  }
+
+  &__price {
+    @include figtree(12px, 24px);
+    text-decoration: line-through;
+    color: $grayscale700;
+  }
+
+  &__price-lowest {
+    @include figtree(12px, 18px);
+    color: $grayscale500;
+  }
+
+  &__flexbox {
+    display: flex;
+    align-items: center;
+    overflow: auto;
+    gap: 12px;
+  }
+
+  &__margin {
+    margin-bottom: 40px;
+    padding-right: 16px;
+  }
+
+  &__button {
+    @include figtree(14px, 20px);
+    color: $black;
+    flex-shrink: 0;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 18px;
+    background-color: $grayscale050;
+    transition-property: background, color;
+    transition-duration: 0.3s;
+    &:hover {
+      cursor: pointer;
+      color: $seagreen800;
+    }
+
+    &.active {
+      background-color: $seagreen600;
+      color: $white;
+    }
+  }
+
+  &__splide {
+    padding-bottom: 64px;
+  }
+
+  &__tag {
+    padding: 2px 8px;
+    border-radius: 16px;
+    border: 1px solid $grayscale100;
+    color: $seagreen800;
+    font-weight: 700;
+    text-transform: uppercase;
+    @include figtree(10px, 20px, 1.2px);
+  }
 }
