@@ -266,6 +266,51 @@
   }
 }
 
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-bottom: 48px;
+  margin-bottom: 48px;
+  border-bottom: 1px solid $grayscale100;
+  width: 100%;
+  justify-content: end;
+  &__page {
+    &:hover {
+      background: var(--green-sea-600, #00aac0);
+      color: var(--white, #fff);
+    }
+    display: grid;
+    place-content: center;
+    flex-shrink: 0;
+    border: 1px solid var(--grayscale-100, #ededed);
+    background: var(--white, #fff);
+    color: #282828;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    &.active {
+      background: var(--green-sea-600, #00aac0);
+      color: var(--white, #fff);
+    }
+
+    &.dots {
+      border: unset;
+    }
+
+    &.next {
+      margin-left: 4px;
+    }
+
+    &.prev {
+      margin-right: 4px;
+    }
+  }
+}
+
 .select-color-js {
   &.active {
     .rolets__color-select {
@@ -309,8 +354,6 @@
     width: 100%;
     gap: 22px;
     padding-bottom: 48px;
-    margin-bottom: 48px;
-    border-bottom: 1px solid $grayscale100;
   }
 
   .hidden {
@@ -433,9 +476,14 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 625px;
+  overflow-x: auto;
+  margin-bottom: 64px;
 }
 
 .tag {
+  width: fit-content;
+  height: fit-content;
   border-radius: 10px;
   background-color: $grayscale050;
   padding: 6px 12px;
@@ -658,5 +706,51 @@
     top: unset;
     z-index: 20;
     border: unset;
+  }
+  .d-f.fd-c.mb-32.w-100 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .product__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding-bottom: 32px;
+  }
+
+  .pagination {
+    justify-content: center;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+    &__page {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .product {
+    padding: 8px;
+  }
+  .product__img {
+    max-width: 144px;
+    height: 144px;
+  }
+  .tags {
+    max-width: 359px;
+  }
+
+  .lorem {
+    padding-bottom: 32px;
+    &__heading {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 24px; /* 133.333% */
+    }
+
+    &__text {
+      font-size: 14px;
+      line-height: 24px; /* 171.429% */
+    }
   }
 }

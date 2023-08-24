@@ -9,7 +9,7 @@ const clearAllJs = document.querySelectorAll(".clear-all-js");
 const roletsColorOptions = document.querySelectorAll(".rolets__color-option");
 const roletsSideOptions = document.querySelectorAll(".rolets__side-option");
 const selectSideBtn = document.querySelector(".select-side-js");
-
+const productsCount = document.querySelector(".rolets__quantity");
 let colorsArray = [];
 let sidesArray = [];
 
@@ -99,6 +99,8 @@ function checkProductsCount() {
       }
     }
   }
+
+  productCount();
 }
 
 function deleteIndex(tablica, wartosc) {
@@ -165,3 +167,14 @@ toggleFilters.forEach((btn) => {
     filters.classList.toggle("active");
   });
 });
+
+function productCount() {
+  const Quantity = document.querySelectorAll(".product.active");
+  if (Quantity.length == 1) {
+    productsCount.textContent = "1 produkt";
+  } else if (Quantity.length >= 1 && Quantity.length <= 4) {
+    productsCount.textContent = `${Quantity.length} produkty`;
+  } else {
+    productsCount.textContent = `${Quantity.length} produktów   `;
+  }
+}
